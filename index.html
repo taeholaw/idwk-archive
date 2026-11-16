@@ -110,7 +110,7 @@ a.ts{color:var(--sub);font-size:12px;white-space:nowrap;padding-top:2px}a.ts:hov
  .player{flex-wrap:wrap;padding:8px 10px calc(8px + env(safe-area-inset-bottom));gap:6px}
  .player .pt{flex:1 1 100%;max-width:100%;font-size:12.5px}
  .player audio{flex:1 1 100%;height:40px}
- .player iframe{width:100%!important;height:auto!important;aspect-ratio:16/9;max-height:200px}
+ .player iframe{width:100%!important;height:auto!important;aspect-ratio:16/9;max-height:170px}
  .player button{flex:1;padding:8px 0}
  footer{padding-bottom:150px!important}
 }
@@ -156,8 +156,8 @@ function epObj(a){return {id:a[0],no:a[1],date:a[2],title:a[3],folder:a[4],guest
 function playUrl(e,t){t=Math.max(0,(t|0)-2);if(e.yt)return `https://www.youtube.com/watch?v=${e.yt}&t=${t}s`;if(e.url){const m=e.url.match(/\/stream\/\d+-xsfm-(.+)\.mp3$/);return m?`https://soundcloud.com/xsfm/${m[1]}`:''}return ''}
 const aud=document.getElementById('aud');let curEp=null;
 function play(id,t){const e=EP[id];if(!e)return;t=Math.max(0,(t|0)-2);const pl=$('#player');pl.style.display='flex';$('#ptitle').textContent=e.title;
- if(e.yt){aud.pause();aud.style.display='none';curEp=null;const f=$('#yt');f.style.display='block';f.src=`https://www.youtube-nocookie.com/embed/${e.yt}?start=${t}&autoplay=1`;return}
- $('#yt').style.display='none';$('#yt').src='about:blank';aud.style.display='block';
+ if(e.yt){$('#m15').style.display=$('#p15').style.display='none';aud.pause();aud.style.display='none';curEp=null;const f=$('#yt');f.style.display='block';f.src=`https://www.youtube-nocookie.com/embed/${e.yt}?start=${t}&autoplay=1`;return}
+ $('#m15').style.display=$('#p15').style.display='';$('#yt').style.display='none';$('#yt').src='about:blank';aud.style.display='block';
  if(curEp!==id){aud.src=e.url;curEp=id}
  if(aud.readyState>=1){aud.currentTime=t;aud.play().catch(()=>{})}else{aud.addEventListener('loadedmetadata',()=>{aud.currentTime=t},{once:true});aud.play().catch(()=>{})}}
 document.addEventListener('click',ev=>{const a=ev.target.closest('[data-play]');if(!a)return;ev.preventDefault();ev.stopPropagation();play(+a.dataset.play,+a.dataset.t)},true);
