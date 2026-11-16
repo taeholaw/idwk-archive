@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
 <title>그것은 알기 싫다 아카이브</title>
 <style>
@@ -58,10 +58,62 @@ table.list{width:100%;border-collapse:collapse;font-size:14px}table.list td{padd
 .load{position:sticky;top:64px;z-index:15;background:#fff8e6;border-bottom:1px solid #f0e2b8;padding:6px 24px;font-size:13px;color:#7a6320;display:flex;gap:10px;align-items:center}
 .load .bar{flex:0 0 200px;height:6px;background:#f0e2b8;border-radius:3px;overflow:hidden}.load .bar i{display:block;height:100%;background:#d8a93a;width:0}
 a.ts{color:var(--sub);font-size:12px;white-space:nowrap;padding-top:2px}a.ts:hover{color:var(--acc)}
-@media (max-width:700px){header{padding:10px 12px}.sbox{min-width:0;flex-wrap:wrap}.sbox input[type=month],.sbox select{flex:1;max-width:none}main{padding:14px 10px 80px}.ep .sp,.ep .qs{padding-left:16px}.ep .hd .d{width:auto}.cols{grid-template-columns:1fr}}
 .player{position:fixed;left:0;right:0;bottom:0;background:#1d1d1f;color:#fff;padding:10px 24px;display:none;align-items:center;gap:14px;z-index:30}
 .player audio{flex:1;height:36px}.player .pt{font-size:13px;max-width:35%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .player button{background:#333;color:#fff;border:0;border-radius:6px;padding:6px 10px}
+
+@media (max-width:720px){
+ body{font-size:14.5px}
+ header{position:static;padding:10px 12px 12px;gap:8px 10px}
+ header .logo{font-size:16px}
+ header nav{margin-left:auto}header nav a{margin:0 0 0 12px;font-size:13.5px}
+ .sbox{flex:1 1 100%;min-width:0;flex-wrap:wrap;gap:6px}
+ .sbox input,.sbox select{min-width:0;padding:9px 10px;font-size:15px}
+ .sbox input[type=search]{flex:1 1 calc(100% - 76px);order:1}
+ .sbox button{order:2;flex:0 0 68px;padding:0}
+ .sbox select{order:3;flex:1 1 30%;max-width:none;font-size:13px}
+ .sbox input[type=month]{order:4;flex:1 1 30%;width:auto;font-size:13px;padding:7px 6px}
+ .load{position:static;padding:6px 12px}.load .bar{flex:1 1 auto}
+ main{padding:12px 10px 150px}
+ .card{padding:14px;border-radius:10px}
+ h2{font-size:16px}
+ .cloud{line-height:1.9}.cloud a{margin-right:7px}
+ .grid{grid-template-columns:1fr;gap:8px}
+ .tabs{overflow-x:auto}.tabs button{padding:8px 10px;font-size:14px;white-space:nowrap}
+ .filters{gap:5px}.filters .btn{padding:6px 9px;font-size:12.5px}
+ .bars{height:56px}
+ .ep .hd{flex-wrap:wrap;gap:2px 10px;padding:12px}
+ .ep .hd .d{order:1;width:auto;font-size:12px}
+ .ep .hd .n{order:2;margin-left:auto;font-size:13px}
+ .ep .hd .t{order:3;flex:1 1 100%;font-size:15px;line-height:1.45}
+ .ep .hd .btn{order:4;margin-top:6px;padding:4px 10px}
+ .ep .sp{padding:0 12px 6px}.ep .qs{padding:2px 12px 10px}
+ .q{flex-wrap:wrap;gap:2px 8px;font-size:14px}
+ .q .tx{flex:1 1 100%}
+ .q .btn{padding:3px 9px;font-size:12px}
+ .cols{grid-template-columns:1fr}.col{max-height:none;padding:12px}
+ .col .meta{line-height:1.5}
+ .epv .top{flex-direction:column;gap:10px}
+ .epv .top>div:last-child{white-space:normal!important;display:flex;gap:6px;flex-wrap:wrap}
+ .epv .ttl{font-size:18px;line-height:1.4;word-break:keep-all}
+ .namu{font-size:13.5px;padding:10px 12px}
+ .find{flex-wrap:wrap}.find input{flex:1 1 55%;min-width:0}
+ .epv .sub .btn{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin:4px 0}
+ .tr .q{padding:8px 2px}
+ table.list,table.list tbody{display:block}
+ table.list tr{display:flex;flex-wrap:wrap;border-top:1px solid var(--line);padding:9px 2px;gap:2px 10px}
+ table.list td{border:0;padding:0;width:auto!important}
+ table.list td:first-child{order:1;font-size:12px}
+ table.list td:last-child{order:2;margin-left:auto;font-size:12px}
+ table.list td:nth-child(2){order:3;flex:1 1 100%;line-height:1.45}
+ table.list td:nth-child(3):not(:last-child){order:4;flex:1 1 100%;font-size:12px}
+ .player{flex-wrap:wrap;padding:8px 10px calc(8px + env(safe-area-inset-bottom));gap:6px}
+ .player .pt{flex:1 1 100%;max-width:100%;font-size:12.5px}
+ .player audio{flex:1 1 100%;height:40px}
+ .player iframe{width:100%!important;height:auto!important;aspect-ratio:16/9;max-height:200px}
+ .player button{flex:1;padding:8px 0}
+ footer{padding-bottom:150px!important}
+}
 </style></head><body>
 <header>
   <a class="logo" href="#/">그것은 <span>알기 싫다</span> 아카이브</a>
